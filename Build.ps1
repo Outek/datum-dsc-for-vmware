@@ -34,7 +34,7 @@ param (
     $MofCompilationTaskCount = 1,
 
     [string]
-    $GalleryRepository = 'Artifactory_PowershellGallery',
+    $GalleryRepository = 'PSGallery',
 
     [uri]
     $GalleryProxy,

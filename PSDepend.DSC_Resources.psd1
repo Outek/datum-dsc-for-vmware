@@ -4,7 +4,7 @@
         Target         = 'DSC_Resources'
         DependencyType = 'PSGalleryModule'
         Parameters     = @{
-            Repository         = 'Artifactory_PowershellGallery'
+            Repository         = 'PSGallery'
             SkipPublisherCheck = $true
         }
     }

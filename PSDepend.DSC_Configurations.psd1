@@ -4,7 +4,7 @@
         Target         = 'DSC_Configurations'
         DependencyType = 'PSGalleryModule'
         Parameters     = @{
-            Repository = 'Artifactory_PowershellGallery'
+            Repository = 'PSGallery'
         }
     }
 
