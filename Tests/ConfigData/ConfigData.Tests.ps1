@@ -24,7 +24,7 @@ Describe 'Node Definition Files' -Tag Integration {
     $nodeDefinitions.ForEach{
         # A Node cannot be empty
         $content = Get-Content -Path $_ -Raw
-        
+
         if ($_.BaseName -ne 'AllNodes') {
             It "$($_.FullName) Should not be duplicated" {
                 $nodeNames -contains $_.BaseName | Should -Be $false
@@ -32,11 +32,11 @@ Describe 'Node Definition Files' -Tag Integration {
         }
         $null = $nodeNames.Add($_.BaseName)
 
-        It "$($_.Name) has valid yaml" {
+        It "Should have a valid yaml file for $($_.Name)" {
             { $content | ConvertFrom-Yaml } | Should -Not -Throw
         }
 
-        It "$($_.Name) is in the right environment" {
+        It "Should be in the right environment $($_.Name)" {
             $node = $content | ConvertFrom-Yaml
             $pathElements = $_.FullName.Split('\')
             $pathElements -contains $node.Environment | Should Be $true
@@ -63,7 +63,7 @@ Describe 'Roles Definition Files' -Tag Integration {
     $usedRolesDefinitions.Foreach{
         $content = Get-Content -Path $_ -Raw
         if ($content) {
-            It "$($_.FullName) has valid yaml" {
+            It "Should have a valid yaml file for node $($_.FullName)" {
                 { $null = $content | ConvertFrom-Yaml } | Should -Not -Throw
             }
         }
@@ -72,8 +72,7 @@ Describe 'Roles Definition Files' -Tag Integration {
 
 Describe 'Role Composition' -Tag Integration {
     foreach ($environment in $environments) {
-        Context "Nodes for environment $environment" {
-            
+        Context "When environment $environment" {
             $nodes = if ($Environment) {
                 $configurationData.AllNodes | Where-Object { $_.NodeName -ne '*' -and $_.Environment -eq $Environment }
             }
@@ -82,7 +81,7 @@ Describe 'Role Composition' -Tag Integration {
             }
 
             foreach ($node in $nodes) {
-                It "$($node.Name) has a valid Configurations Setting (!`$null)" {
+                It "Should have a valid Configurations Setting on node $($node.Name) (!`$null)" {
                     { Lookup Configurations -Node $node -DatumTree $datum } | Should -Not -Throw
                 }
             }

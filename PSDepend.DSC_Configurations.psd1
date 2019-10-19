@@ -8,5 +8,5 @@
         }
     }
 
-    vSpherePFDsc = 'latest'
+    CommonvSphereTasks = 'latest'
 }

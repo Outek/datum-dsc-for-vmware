@@ -1,0 +1,17 @@
+# SomeRole.yml
+
+Data1:
+  Property11: RoleValue11
+  Property12: RoleValue12
+
+Data2:
+  Property21: RoleValue21
+  Property22: RoleValue22
+
+Disks:
+  - Number: 1
+    DriveLetter: D
+    FS: NTFS
+  - Number: 2
+    DriveLetter: E
+    FS: ReFS

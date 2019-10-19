@@ -15,7 +15,6 @@ Describe 'Pull Server Deployment' -Tag BuildAcceptance, PullServer {
 
     foreach ($node in $environmentNodes) {
         It "MOF file for node $($node.NodeName) was deployed to $($env:DscConfiguration)" {
-        
             Get-ChildItem -Path $env:DscConfiguration -Filter "$($node.NodeName).mof" | Select-String -Pattern ">>$($env:BHBuildNumber)<<" | Should -Not -BeNullOrEmpty
         }
     }
@@ -28,28 +27,28 @@ Describe 'MOF Files' -Tag BuildAcceptance {
         $nodes = $configurationData.AllNodes
     }
 
-    It 'All nodes have a MOF file' {
+    It 'Should have a MOF file for all nodes' {
         Write-Verbose "MOF File Count $($mofFiles.Count)"
         Write-Verbose "Node Count $($nodes.Count)"
         $mofFiles.Count | Should -Be $nodes.Count
     }
 
     foreach ($node in $nodes) {
-        It "Node '$($node.NodeName)' should have a MOF file" {
+        It "Should have a MOF file for Node '$($node.NodeName)'" {
             $mofFiles | Where-Object BaseName -eq $node.NodeName | Should -BeOfType System.IO.FileSystemInfo 
         }
     }
 
     if ($metaMofFiles) {
-        It 'All nodes have a Meta MOF file' {
+        It 'Should have a Meta MOF file for every node' {
             Write-Verbose "Meta MOF File Count $($metaMofFiles.Count)"
             Write-Verbose "Node Count $($nodes.Count)"
-    
+
             $metaMofFiles.Count | Should -BeIn $nodes.Count
         }
 
         foreach ($node in $nodes) {
-            It "Node '$($node.NodeName)' should have a Meta MOF file" {       
+            It "Should have a Meta MOF file for Node '$($node.NodeName)'" {       
                 $metaMofFiles | Where-Object BaseName -eq "$($node.NodeName).meta" | Should -BeOfType System.IO.FileSystemInfo 
             }
         }
