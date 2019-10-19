@@ -1,0 +1,165 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">xPSDesiredStateConfiguration</S>
+      <S N="Version">8.9.0.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">The xPSDesiredStateConfiguration module is a part of the Windows PowerShell Desired State Configuration (DSC) Resource Kit, which is a collection of DSC Resources produced by the PowerShell Team. This module contains the xDscWebService, xWindowsProcess, xService, xPackage, xArchive, xRemoteFile, xPSEndpoint and xWindowsOptionalFeature resources. Please see the Details section for more information on the functionalities provided by these resources._x000D__x000A__x000D__x000A_All of the resources in the DSC Resource Kit are provided AS IS, and are not supported through any Microsoft standard support program or service. The "x" in xPSDesiredStateConfiguration stands for experimental, which means that these resources will be fix forward and monitored by the module owner(s).</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">PowerShellTeam</S>
+      <S N="Copyright">(c) Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2019-08-08T05:10:57+02:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/PowerShell/xPSDesiredStateConfiguration</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>DesiredStateConfiguration</S>
+          <S>DSC</S>
+          <S>DSCResourceKit</S>
+          <S>DSCResource</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST>
+                <S>MSFT_x005F_xArchive</S>
+                <S>MSFT_x005F_xDSCWebService</S>
+                <S>MSFT_x005F_xEnvironmentResource</S>
+                <S>MSFT_x005F_xGroupResource</S>
+                <S>MSFT_x005F_xMsiPackage</S>
+                <S>MSFT_x005F_xPackageResource</S>
+                <S>MSFT_x005F_xPSSessionConfiguration</S>
+                <S>MSFT_x005F_xRegistryResource</S>
+                <S>MSFT_x005F_xRemoteFile</S>
+                <S>MSFT_x005F_xScriptResource</S>
+                <S>MSFT_x005F_xServiceResource</S>
+                <S>MSFT_x005F_xUserResource</S>
+                <S>MSFT_x005F_xWindowsFeature</S>
+                <S>MSFT_x005F_xWindowsOptionalFeature</S>
+                <S>MSFT_x005F_xWindowsPackageCab</S>
+                <S>MSFT_x005F_xWindowsProcess</S>
+                <S>xFileUpload</S>
+                <S>xGroupSet</S>
+                <S>xProcessSet</S>
+                <S>xServiceSet</S>
+                <S>xWindowsFeatureSet</S>
+                <S>xWindowsOptionalFeatureSet</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Publish-DSCModuleAndMof</S>
+                <S>New-ZipFromPSModulePath</S>
+                <S>New-ZipFromSource</S>
+                <S>Publish-ModulesAndChecksum</S>
+                <S>Publish-MofsInSource</S>
+                <S>Write-LogEntry</S>
+                <S>Publish-ModuleToPullServer</S>
+                <S>Publish-MOFToPullServer</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Publish-DSCModuleAndMof</S>
+                <S>New-ZipFromPSModulePath</S>
+                <S>New-ZipFromSource</S>
+                <S>Publish-ModulesAndChecksum</S>
+                <S>Publish-MofsInSource</S>
+                <S>Write-LogEntry</S>
+                <S>Publish-ModuleToPullServer</S>
+                <S>Publish-MOFToPullServer</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="4" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">- MSFT_x005F_xRemoteFile:_x000D__x000A_  - Add a retry mechanism when the download fails._x000D__x000A_- Fixes 631, typo in SQL connection string property name</S>
+      <Obj N="Dependencies" RefId="7">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) Microsoft Corporation. All rights reserved.</S>
+          <S N="description">The xPSDesiredStateConfiguration module is a part of the Windows PowerShell Desired State Configuration (DSC) Resource Kit, which is a collection of DSC Resources produced by the PowerShell Team. This module contains the xDscWebService, xWindowsProcess, xService, xPackage, xArchive, xRemoteFile, xPSEndpoint and xWindowsOptionalFeature resources. Please see the Details section for more information on the functionalities provided by these resources._x000D__x000A__x000D__x000A_All of the resources in the DSC Resource Kit are provided AS IS, and are not supported through any Microsoft standard support program or service. The "x" in xPSDesiredStateConfiguration stands for experimental, which means that these resources will be fix forward and monitored by the module owner(s).</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">- MSFT_x005F_xRemoteFile:_x000D__x000A_  - Add a retry mechanism when the download fails._x000D__x000A_- Fixes 631, typo in SQL connection string property name</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">41060</S>
+          <S N="downloadCount">7175918</S>
+          <S N="packageSize">483978</S>
+          <S N="published">08.08.2019 05:10:57 +02:00</S>
+          <S N="created">08.08.2019 05:10:57 +02:00</S>
+          <S N="lastUpdated">20.08.2019 20:44:06 +02:00</S>
+          <S N="tags">DesiredStateConfiguration DSC DSCResourceKit DSCResource PSModule PSFunction_Publish-DSCModuleAndMof PSCommand_Publish-DSCModuleAndMof PSFunction_New-ZipFromPSModulePath PSCommand_New-ZipFromPSModulePath PSFunction_New-ZipFromSource PSCommand_New-ZipFromSource PSFunction_Publish-ModulesAndChecksum PSCommand_Publish-ModulesAndChecksum PSFunction_Publish-MofsInSource PSCommand_Publish-MofsInSource PSFunction_Write-LogEntry PSCommand_Write-LogEntry PSFunction_Publish-ModuleToPullServer PSCommand_Publish-ModuleToPullServer PSFunction_Publish-MOFToPullServer PSCommand_Publish-MOFToPullServer PSIncludes_Function PSDscResource_MSFT_x005F_xArchive PSDscResource_MSFT_x005F_xDSCWebService PSDscResource_MSFT_x005F_xEnvironmentResource PSDscResource_MSFT_x005F_xGroupResource PSDscResource_MSFT_x005F_xMsiPackage PSDscResource_MSFT_x005F_xPackageResource PSDscResource_MSFT_x005F_xPSSessionConfiguration PSDscResource_MSFT_x005F_xRegistryResource PSDscResource_MSFT_x005F_xRemoteFile PSDscResource_MSFT_x005F_xScriptResource PSDscResource_MSFT_x005F_xServiceResource PSDscResource_MSFT_x005F_xUserResource PSDscResource_MSFT_x005F_xWindowsFeature PSDscResource_MSFT_x005F_xWindowsOptionalFeature PSDscResource_MSFT_x005F_xWindowsPackageCab PSDscResource_MSFT_x005F_xWindowsProcess PSDscResource_x005F_xFileUpload PSDscResource_x005F_xGroupSet PSDscResource_x005F_xProcessSet PSDscResource_x005F_xServiceSet PSDscResource_x005F_xWindowsFeatureSet PSDscResource_x005F_xWindowsOptionalFeatureSet PSIncludes_DscResource</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2019-08-20T20:44:06Z</S>
+          <S N="NormalizedVersion">8.9.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">xPSDesiredStateConfiguration.nuspec|CHANGELOG.md|CODE_OF_CONDUCT.md|HighQualityResourceModulePlan.md|LICENSE|README.md|xPSDesiredStateConfiguration.psd1|DSCPullServerSetup\PublishModulesAndMofsToPullServer.psm1|DSCPullServerSetup\README.md|DSCPullServerSetup\PullServerDeploymentVerificationTest\PullServerSetupTests.ps1|DSCResources\CommonResourceHelper.psm1|DSCResources\ResourceSetHelper.psm1|DSCResources\MSFT_x005F_xArchive\MSFT_x005F_xArchive.psm1|DSCResources\MSFT_x005F_xArchive\MSFT_x005F_xArchive.schema.mof|DSCResources\MSFT_x005F_xArchive\en-US\MSFT_x005F_xArchive.schema.mfl|DSCResources\MSFT_x005F_xArchive\en-US\MSFT_x005F_xArchive.strings.psd1|DSCResources\MSFT_x005F_xDSCWebService\Firewall.psm1|DSCResources\MSFT_x005F_xDSCWebService\MSFT_x005F_xDSCWebService.psm1|DSCResources\MSFT_x005F_xDSCWebService\MSFT_x005F_xDSCWebService.schema.mof|DSCResources\MSFT_x005F_xDSCWebService\PSWSIISEndpoint.psm1|DSCResources\MSFT_x005F_xDSCWebService\SecureTLSProtocols.psm1|DSCResources\MSFT_x005F_xDSCWebService\UseSecurityBestPractices.psm1|DSCResources\MSFT_x005F_xDSCWebService\en-US\MSFT_x005F_xDSCWebService.psd1|DSCResources\MSFT_x005F_xEnvironmentResource\MSFT_x005F_xEnvironmentResource.psm1|DSCResources\MSFT_x005F_xEnvironmentResource\MSFT_x005F_xEnvironmentResource.schema.mof|DSCResources\MSFT_x005F_xEnvironmentResource\en-US\MSFT_x005F_xEnvironmentResource.schema.mfl|DSCResources\MSFT_x005F_xEnvironmentResource\en-US\MSFT_x005F_xEnvironmentResource.strings.psd1|DSCResources\MSFT_x005F_xGroupResource\MSFT_x005F_xGroupResource.psm1|DSCResources\MSFT_x005F_xGroupResource\MSFT_x005F_xGroupResource.schema.mof|DSCResources\MSFT_x005F_xGroupResource\en-US\MSFT_x005F_xGroupResource.schema.mfl|DSCResources\MSFT_x005F_xGroupResource\en-US\MSFT_x005F_xGroupResource.strings.psd1|DSCResources\MSFT_x005F_xMsiPackage\MSFT_x005F_xMsiPackage.psm1|DSCResources\MSFT_x005F_xMsiPackage\MSFT_x005F_xMsiPackage.schema.mof|DSCResources\MSFT_x005F_xMsiPackage\en-US\MSFT_x005F_xMsiPackage.schema.mfl|DSCResources\MSFT_x005F_xMsiPackage\en-US\MSFT_x005F_xMsiPackage.strings.psd1|DSCResources\MSFT_x005F_xPackageResource\MSFT_x005F_xPackageResource.psm1|DSCResources\MSFT_x005F_xPackageResource\MSFT_x005F_xPackageResource.schema.mof|DSCResources\MSFT_x005F_xPackageResource\en-US\MSFT_x005F_xPackageResource.schema.mfl|DSCResources\MSFT_x005F_xPackageResource\en-US\MSFT_x005F_xPackageResource.strings.psd1|DSCResources\MSFT_x005F_xPSSessionConfiguration\MSFT_x005F_xPSSessionConfiguration.psm1|DSCResources\MSFT_x005F_xPSSessionConfiguration\MSFT_x005F_xPSSessionConfiguration.schema.mof|DSCResources\MSFT_x005F_xRegistryResource\MSFT_x005F_xRegistryResource.psm1|DSCResources\MSFT_x005F_xRegistryResource\MSFT_x005F_xRegistryResource.schema.mof|DSCResources\MSFT_x005F_xRegistryResource\en-US\MSFT_x005F_xRegistryResource.schema.mfl|DSCResources\MSFT_x005F_xRegistryResource\en-US\MSFT_x005F_xRegistryResource.strings.psd1|DSCResources\MSFT_x005F_xRemoteFile\MSFT_x005F_xRemoteFile.psm1|DSCResources\MSFT_x005F_xRemoteFile\MSFT_x005F_xRemoteFile.schema.mof|DSCResources\MSFT_x005F_xRemoteFile\en-us\MSFT_x005F_xRemoteFile.strings.psd1|DSCResources\MSFT_x005F_xScriptResource\MSFT_x005F_xScriptResource.psm1|DSCResources\MSFT_x005F_xScriptResource\MSFT_x005F_xScriptResource.schema.mof|DSCResources\MSFT_x005F_xScriptResource\en-US\MSFT_x005F_xScriptResource.schema.mfl|DSCResources\MSFT_x005F_xScriptResource\en-US\MSFT_x005F_xScriptResource.strings.psd1|DSCResources\MSFT_x005F_xServiceResource\MSFT_x005F_xServiceResource.psm1|DSCResources\MSFT_x005F_xServiceResource\MSFT_x005F_xServiceResource.schema.mof|DSCResources\MSFT_x005F_xServiceResource\en-US\MSFT_x005F_xServiceResource.schema.mfl|DSCResources\MSFT_x005F_xServiceResource\en-US\MSFT_x005F_xServiceResource.strings.psd1|DSCResources\MSFT_x005F_xUserResource\MSFT_x005F_xUserResource.psm1|DSCResources\MSFT_x005F_xUserResource\MSFT_x005F_xUserResource.schema.mof|DSCResources\MSFT_x005F_xUserResource\en-US\MSFT_x005F_xUserResource.schema.mfl|DSCResources\MSFT_x005F_xUserResource\en-US\MSFT_x005F_xUserResource.strings.psd1|DSCResources\MSFT_x005F_xWindowsFeature\MSFT_x005F_xWindowsFeature.psm1|DSCResources\MSFT_x005F_xWindowsFeature\MSFT_x005F_xWindowsFeature.schema.mof|DSCResources\MSFT_x005F_xWindowsFeature\en-US\MSFT_x005F_xWindowsFeature.schema.mfl|DSCResources\MSFT_x005F_xWindowsFeature\en-US\MSFT_x005F_xWindowsFeature.strings.psd1|DSCResources\MSFT_x005F_xWindowsOptionalFeature\MSFT_x005F_xWindowsOptionalFeature.psm1|DSCResources\MSFT_x005F_xWindowsOptionalFeature\MSFT_x005F_xWindowsOptionalFeature.schema.mof|DSCResources\MSFT_x005F_xWindowsOptionalFeature\en-US\MSFT_x005F_xWindowsOptionalFeature.schema.mfl|DSCResources\MSFT_x005F_xWindowsOptionalFeature\en-US\MSFT_x005F_xWindowsOptionalFeature.strings.psd1|DSCResources\MSFT_x005F_xWindowsPackageCab\MSFT_x005F_xWindowsPackageCab.psm1|DSCResources\MSFT_x005F_xWindowsPackageCab\MSFT_x005F_xWindowsPackageCab.schema.mof|DSCResources\MSFT_x005F_xWindowsPackageCab\en-US\MSFT_x005F_xWindowsPackageCab.schema.mfl|DSCResources\MSFT_x005F_xWindowsPackageCab\en-US\MSFT_x005F_xWindowsPackageCab.strings.psd1|DSCResources\MSFT_x005F_xWindowsProcess\MSFT_x005F_xWindowsProcess.psm1|DSCResources\MSFT_x005F_xWindowsProcess\MSFT_x005F_xWindowsProcess.schema.mof|DSCResources\MSFT_x005F_xWindowsProcess\en-US\MSFT_x005F_xWindowsProcess.schema.mfl|DSCResources\MSFT_x005F_xWindowsProcess\en-US\MSFT_x005F_xWindowsProcess.strings.psd1|DSCResources\xFileUpload\xFileUpload.psd1|DSCResources\xFileUpload\xFileUpload.schema.psm1|DSCResources\xGroupSet\xGroupSet.psd1|DSCResources\xGroupSet\xGroupSet.schema.psm1|DSCResources\xProcessSet\xProcessSet.psd1|DSCResources\xProcessSet\xProcessSet.schema.psm1|DSCResources\xServiceSet\xServiceSet.psd1|DSCResources\xServiceSet\xServiceSet.schema.psm1|DSCResources\xWindowsFeatureSet\xWindowsFeatureSet.psd1|DSCResources\xWindowsFeatureSet\xWindowsFeatureSet.schema.psm1|DSCResources\xWindowsOptionalFeatureSet\xWindowsOptionalFeatureSet.psd1|DSCResources\xWindowsOptionalFeatureSet\xWindowsOptionalFeatureSet.schema.psm1|Examples\Sample_x005F_xDscWebServiceRegistration.ps1|Examples\Sample_x005F_xDscWebServiceRegistrationWithSecurityBestPractices.ps1|Examples\Sample_x005F_xDscWebServiceRegistration_UseSQLProvider.ps1|Examples\Sample_x005F_xDscWebServiceRegistration_Win2k12and2k12R2.ps1|Examples\Sample_x005F_xDscWebServiceRemoval.ps1|Examples\Sample_x005F_xDscWebService_Client.ps1|Examples\Sample_x005F_xDscWebService_Preferred.ps1|Examples\xArchive_ExpandArchiveChecksumAndForceConfig.ps1|Examples\xArchive_ExpandArchiveDefaultValidationAndForceConfig.ps1|Examples\xArchive_ExpandArchiveNoValidationConfig.ps1|Examples\xArchive_ExpandArchiveNoValidationCredentialConfig.ps1|Examples\xArchive_RemoveArchiveChecksumConfig.ps1|Examples\xArchive_RemoveArchiveNoValidationConfig.ps1|Examples\xEnvironment_AddMultiplePathsConfig.ps1|Examples\xEnvironment_CreateNonPathVariableConfig.ps1|Examples\xEnvironment_RemoveMultiplePathsConfig.ps1|Examples\xEnvironment_RemoveVariableConfig.ps1|Examples\xFileUpload_UploadToSMBShareConfig.ps1|Examples\xGroupSet_AddMembersConfig.ps1|Examples\xGroup_RemoveMembersConfig.ps1|Examples\xGroup_SetMembersConfig.ps1|Examples\xMsiPackage_InstallPackageConfig.ps1|Examples\xMsiPackage_UninstallPackageFromFileConfig.ps1|Examples\xMsiPackage_UninstallPackageFromHttpsConfig.ps1|Examples\xPackage_InstallExeUsingCredentialsAndRegistryConfig.ps1|Examples\xPackage_InstallExeUsingCredentialsConfig.ps1|Examples\xPackage_InstallMsiConfig.ps1|Examples\xPackage_InstallMsiUsingProductIdConfig.ps1|Examples\xProcessSet_StartProcessConfig.ps1|Examples\xProcessSet_StopProcessConfig.ps1|Examples\xPSEndpoint_NewConfig.ps1|Examples\xPSEndpoint_NewCustomConfig.ps1|Examples\xPSEndpoint_NewWithDefaultsConfig.ps1|Examples\xPSEndpoint_RemoveConfig.ps1|Examples\xRegistryResource_AddKeyConfig.ps1|Examples\xRegistryResource_AddOrModifyValueConfig.ps1|Examples\xRegistryResource_RemoveKeyConfig.ps1|Examples\xRegistryResource_RemoveValueConfig.ps1|Examples\xRemoteFile_DownloadFileConfig.ps1|Examples\xRemoteFile_DownloadFileUsingProxyConfig.ps1|Examples\xScript_WatchFileContentConfig.ps1|Examples\xServiceSet_EnsureBuiltInAccountConfig.ps1|Examples\xServiceSet_StartServicesConfig.ps1|Examples\xService_ChangeServiceStateConfig.ps1|Examples\xService_CreateServiceConfig.ps1|Examples\xService_CreateServiceConfigGroupManagedServiceAccount.ps1|Examples\xService_RemoveServiceConfig.ps1|Examples\xService_UpdateStartupTypeIgnoreStateConfig.ps1|Examples\xUser_CreateUserConfig.ps1|Examples\xUser_CreateUserDetailedConfig.ps1|Examples\xUser_RemoveUserConfig.ps1|Examples\xWindowsFeatureSet_AddFeaturesConfig.ps1|Examples\xWindowsFeatureSet_RemoveFeaturesConfig.ps1|Examples\xWindowsFeature_AddFeatureConfig.ps1|Examples\xWindowsFeature_AddFeatureUsingCredentialConfig.ps1|Examples\xWindowsFeature_AddFeatureWithLogPathConfig.ps1|Examples\xWindowsFeature_RemoveFeatureConfig.ps1|Examples\xWindowsOptionalFeatureSet_DisableConfig.ps1|Examples\xWindowsOptionalFeatureSet_EnableConfig.ps1|Examples\xWindowsOptionalFeature_DisableConfig.ps1|Examples\xWindowsOptionalFeature_EnableConfig.ps1|Examples\xWindowsPackageCab_InstallPackageConfig.ps1|Examples\xWindowsProcess_StartProcessConfig.ps1|Examples\xWindowsProcess_StartProcessUnderUserConfig.ps1|Examples\xWindowsProcess_StopProcessConfig.ps1|Examples\xWindowsProcess_StopProcessUnderUserConfig.ps1|ResourceDesignerScripts\GenerateXRemoteFileSchema.ps1|ResourceDesignerScripts\New-PSSessionConfigurationResource.ps1|Tests\CommonTestHelper.psm1|Tests\DSCTestService.cs|Tests\DSCTestServiceNew.cs|Tests\MSFT_x005F_xGroupResource.TestHelper.psm1|Tests\MSFT_x005F_xPackageResource.TestHelper.psm1|Tests\MSFT_x005F_xRegistryResource.TestHelper.psm1|Tests\MSFT_x005F_xServiceResource.TestHelper.psm1|Tests\MSFT_x005F_xWindowsProcess.TestHelper.psm1|Tests\Integration\MSFT_x005F_xArchive.EndToEnd.Tests.ps1|Tests\Integration\MSFT_x005F_xArchive.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xArchive.TestHelper.psm1|Tests\Integration\MSFT_x005F_xArchive_CredentialOnly.config.ps1|Tests\Integration\MSFT_x005F_xArchive_ValidateAndChecksum.config.ps1|Tests\Integration\MSFT_x005F_xArchive_ValidateOnly.config.ps1|Tests\Integration\MSFT_x005F_xDSCWebService.config.ps1|Tests\Integration\MSFT_x005F_xDSCWebService.Integration.tests.ps1|Tests\Integration\MSFT_x005F_xEnvironmentResource.config.ps1|Tests\Integration\MSFT_x005F_xEnvironmentResource.EndToEnd.Tests.ps1|Tests\Integration\MSFT_x005F_xEnvironmentResource.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xGroupResource.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xGroupResource_Members.config.ps1|Tests\Integration\MSFT_x005F_xGroupResource_MembersToIncludeExclude.config.ps1|Tests\Integration\MSFT_x005F_xGroupResource_NoMembers.config.ps1|Tests\Integration\MSFT_x005F_xMsiPackage.EndToEnd.Tests.ps1|Tests\Integration\MSFT_x005F_xMsiPackage.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xMsiPackage_LogPath.ps1|Tests\Integration\MSFT_x005F_xMsiPackage_NoOptionalParameters.ps1|Tests\Integration\MSFT_x005F_xPackageResource.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xRegistryResource.EndToEnd.Tests.ps1|Tests\Integration\MSFT_x005F_xRegistryResource.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xRegistryResource_KeyAndNameOnly.config.ps1|Tests\Integration\MSFT_x005F_xRegistryResource_WithDataAndType.config.ps1|Tests\Integration\MSFT_x005F_xRemoteFile.config.ps1|Tests\Integration\MSFT_x005F_xRemoteFile.Tests.ps1|Tests\Integration\MSFT_x005F_xScriptResource.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xScriptResource_NoCredential.config.ps1|Tests\Integration\MSFT_x005F_xScriptResource_WithCredential.config.ps1|Tests\Integration\MSFT_x005F_xServiceResource.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xServiceResource_AllExceptCredential.config.ps1|Tests\Integration\MSFT_x005F_xServiceResource_CredentialOnly.config.ps1|Tests\Integration\MSFT_x005F_xUserResource.config.ps1|Tests\Integration\MSFT_x005F_xUserResource.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xWindowsFeature.config.ps1|Tests\Integration\MSFT_x005F_xWindowsFeature.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xWindowsOptionalFeature.config.ps1|Tests\Integration\MSFT_x005F_xWindowsOptionalFeature.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xWindowsPackageCab.config.ps1|Tests\Integration\MSFT_x005F_xWindowsPackageCab.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xWindowsProcess.config.ps1|Tests\Integration\MSFT_x005F_xWindowsProcess.Integration.Tests.ps1|Tests\Integration\MSFT_x005F_xWindowsProcessWithCredential.config.ps1|Tests\Integration\xFileUpload.config.ps1|Tests\Integration\xFileUpload.Integration.Tests.ps1|Tests\Integration\xGroupSet.config.ps1|Tests\Integration\xGroupSet.Integration.Tests.ps1|Tests\Integration\xProcessSet.config.ps1|Tests\Integration\xProcessSet.Integration.Tests.ps1|Tests\Integration\xServiceSet.Integration.Tests.ps1|Tests\Integration\xServiceSet_AllExceptBuiltInAccount.config.ps1|Tests\Integration\xServiceSet_BuiltInAccountOnly.config.ps1|Tests\Integration\xWindowsFeatureSet.config.ps1|Tests\Integration\xWindowsFeatureSet.Integration.Tests.ps1|Tests\Integration\xWindowsOptionalFeatureSet.config.ps1|Tests\Integration\xWindowsOptionalFeatureSet.Integration.Tests.ps1|Tests\Unit\CommonResourceHelper.Tests.ps1|Tests\Unit\MSFT_x005F_xArchive.Tests.ps1|Tests\Unit\MSFT_x005F_xDSCWebService.Tests.ps1|Tests\Unit\MSFT_x005F_xEnvironmentResource.Tests.ps1|Tests\Unit\MSFT_x005F_xGroupResource.Tests.ps1|Tests\Unit\MSFT_x005F_xMsiPackage.Tests.ps1|Tests\Unit\MSFT_x005F_xPackageResource.Tests.ps1|Tests\Unit\MSFT_x005F_xRegistryResource.Tests.ps1|Tests\Unit\MSFT_x005F_xRemoteFile.Tests.ps1|Tests\Unit\MSFT_x005F_xScriptResource.Tests.ps1|Tests\Unit\MSFT_x005F_xServiceResource.Tests.ps1|Tests\Unit\MSFT_x005F_xUserResource.TestHelper.psm1|Tests\Unit\MSFT_x005F_xUserResource.Tests.ps1|Tests\Unit\MSFT_x005F_xWindowsFeature.Tests.ps1|Tests\Unit\MSFT_x005F_xWindowsOptionalFeature.Tests.ps1|Tests\Unit\MSFT_x005F_xWindowsPackageCab.Tests.ps1|Tests\Unit\MSFT_x005F_xWindowsProcess.Tests.ps1|Tests\Unit\ResourceSetHelper.Tests.ps1</S>
+          <S N="GUID">cc8dc021-fa5f-4f96-8ecf-dfd68a6d9d48</S>
+          <S N="PowerShellVersion">4.0</S>
+          <S N="CLRVersion">4.0</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Temp\DscWorkshop\DscSample\DSC_Resources\xPSDesiredStateConfiguration\8.9.0.0</S>
+    </MS>
+  </Obj>
+</Objs>

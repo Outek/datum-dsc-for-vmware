@@ -1,0 +1,11 @@
+Configurations:
+  - EsxHost
+
+EsxHost:
+  NtpServers: Server1
+
+EsxHost:
+  NtpServers:
+    - NtpServer:
+      - Server1
+      - Server2

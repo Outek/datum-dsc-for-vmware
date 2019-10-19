@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="23" errors="0" failures="3" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2019-10-18" time="16:07:44">
+  <environment user="siegenthalda" machine-name="E1-VVC-AWSU001" cwd="D:\datum-dsc-for-vmware" user-domain="POST" platform="Microsoft Windows Server 2019 Standard|C:\Windows|\Device\Harddisk0\Partition3" nunit-version="2.5.8.0" os-version="10.0.17763" clr-version="4.0.30319.42000" />
+  <culture-info current-culture="de-CH" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Failure" success="False" time="1.9245" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="D:\datum-dsc-for-vmware\Tests\Acceptance\TestMofFiles.Tests.ps1" executed="True" result="Success" success="True" time="0.5763" asserts="0" description="D:\datum-dsc-for-vmware\Tests\Acceptance\TestMofFiles.Tests.ps1">
+        <results />
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\datum-dsc-for-vmware\Tests\ConfigData\ConfigData.Tests.ps1" executed="True" result="Failure" success="False" time="1.3482" asserts="0" description="D:\datum-dsc-for-vmware\Tests\ConfigData\ConfigData.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Datum Tree Definition" executed="True" result="Success" success="True" time="0.1623" asserts="0" description="Datum Tree Definition">
+            <results>
+              <test-case description="Exists in DSC_ConfigData Folder" name="Datum Tree Definition.Exists in DSC_ConfigData Folder" time="0.0108" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="is Valid Yaml" name="Datum Tree Definition.is Valid Yaml" time="0.0223" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Node Definition Files" executed="True" result="Success" success="True" time="0.2689" asserts="0" description="Node Definition Files">
+            <results>
+              <test-case description="D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\Lab\Lab_ESXiHost1.yml Should not be duplicated" name="Node Definition Files.D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\Lab\Lab_ESXiHost1.yml Should not be duplicated" time="0.003" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Lab_ESXiHost1.yml has valid yaml" name="Node Definition Files.Lab_ESXiHost1.yml has valid yaml" time="0.0088" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Lab_ESXiHost1.yml is in the right environment" name="Node Definition Files.Lab_ESXiHost1.yml is in the right environment" time="0.0084" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\Lab\Lab_ESXiHost2.yml Should not be duplicated" name="Node Definition Files.D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\Lab\Lab_ESXiHost2.yml Should not be duplicated" time="0.0033" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Lab_ESXiHost2.yml has valid yaml" name="Node Definition Files.Lab_ESXiHost2.yml has valid yaml" time="0.0073" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Lab_ESXiHost2.yml is in the right environment" name="Node Definition Files.Lab_ESXiHost2.yml is in the right environment" time="0.0076" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\NonProd\NonProd_ESXiHost1.yml Should not be duplicated" name="Node Definition Files.D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\NonProd\NonProd_ESXiHost1.yml Should not be duplicated" time="0.004" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="NonProd_ESXiHost1.yml has valid yaml" name="Node Definition Files.NonProd_ESXiHost1.yml has valid yaml" time="0.0111" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="NonProd_ESXiHost1.yml is in the right environment" name="Node Definition Files.NonProd_ESXiHost1.yml is in the right environment" time="0.0077" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\NonProd\NonProd_ESXiHost2.yml Should not be duplicated" name="Node Definition Files.D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\NonProd\NonProd_ESXiHost2.yml Should not be duplicated" time="0.0025" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="NonProd_ESXiHost2.yml has valid yaml" name="Node Definition Files.NonProd_ESXiHost2.yml has valid yaml" time="0.0078" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="NonProd_ESXiHost2.yml is in the right environment" name="Node Definition Files.NonProd_ESXiHost2.yml is in the right environment" time="0.0078" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\Prod\Prod_ESXiHost1.yml Should not be duplicated" name="Node Definition Files.D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\Prod\Prod_ESXiHost1.yml Should not be duplicated" time="0.0026" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Prod_ESXiHost1.yml has valid yaml" name="Node Definition Files.Prod_ESXiHost1.yml has valid yaml" time="0.0097" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Prod_ESXiHost1.yml is in the right environment" name="Node Definition Files.Prod_ESXiHost1.yml is in the right environment" time="0.0088" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\Prod\Prod_ESXiHost2.yml Should not be duplicated" name="Node Definition Files.D:\datum-dsc-for-vmware\DSC_ConfigData\AllNodes\Prod\Prod_ESXiHost2.yml Should not be duplicated" time="0.003" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Prod_ESXiHost2.yml has valid yaml" name="Node Definition Files.Prod_ESXiHost2.yml has valid yaml" time="0.0086" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Prod_ESXiHost2.yml is in the right environment" name="Node Definition Files.Prod_ESXiHost2.yml is in the right environment" time="0.0074" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Roles Definition Files" executed="True" result="Failure" success="False" time="0.1999" asserts="0" description="Roles Definition Files">
+            <results>
+              <test-case description="D:\datum-dsc-for-vmware\DSC_ConfigData\Roles\Lab_EsxHosts.yml has valid yaml" name="Roles Definition Files.D:\datum-dsc-for-vmware\DSC_ConfigData\Roles\Lab_EsxHosts.yml has valid yaml" time="0.0863" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Expected no exception to be thrown, but an exception "Exception calling "Load" with "1" argument(s): "(Line: 7, Col: 1, Idx: 67) - (Line: 7, Col: 8, Idx: 74): Duplicate key"" was thrown from D:\datum-dsc-for-vmware\BuildOutput\Modules\powershell-yaml\0.4.0\powershell-yaml.psm1:234 char:22
+    + ... documents = Get-YamlDocuments -Yaml $Yaml -UseMergingParser:$UseMergi ...
+    +                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, D:\datum-dsc-for-vmware\Tests\ConfigData\ConfigData.Tests.ps1: line 67
+67:                 { $null = $content | ConvertFrom-Yaml } | Should -Not -Throw</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+          <test-suite type="TestFixture" name="Role Composition" executed="True" result="Failure" success="False" time="0.5899" asserts="0" description="Role Composition">
+            <results>
+              <test-suite type="TestFixture" name="Nodes for environment Lab" executed="True" result="Failure" success="False" time="0.4297" asserts="0" description="Nodes for environment Lab">
+                <results>
+                  <test-case description="Lab_ESXiHost1 has a valid Configurations Setting (!$null)" name="Role Composition.Nodes for environment Lab.Lab_ESXiHost1 has a valid Configurations Setting (!$null)" time="0.1214" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Expected no exception to be thrown, but an exception "The lookup of path 'Configurations' for node 'Lab_ESXiHost1' returned a Null value, but Null is not specified as Default. This is not allowed." was thrown from D:\datum-dsc-for-vmware\BuildOutput\Modules\datum\0.0.38\ScriptsToProcess\Resolve-NodeProperty.ps1:106 char:9
+    +         throw "The lookup of path '$PropertyPath' for node '$($node.N ...
+    +         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, D:\datum-dsc-for-vmware\Tests\ConfigData\ConfigData.Tests.ps1: line 86
+86:                     { Lookup Configurations -Node $node -DatumTree $datum } | Should -Not -Throw</stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case description="Lab_ESXiHost2 has a valid Configurations Setting (!$null)" name="Role Composition.Nodes for environment Lab.Lab_ESXiHost2 has a valid Configurations Setting (!$null)" time="0.0933" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Expected no exception to be thrown, but an exception "The lookup of path 'Configurations' for node 'Lab_ESXiHost2' returned a Null value, but Null is not specified as Default. This is not allowed." was thrown from D:\datum-dsc-for-vmware\BuildOutput\Modules\datum\0.0.38\ScriptsToProcess\Resolve-NodeProperty.ps1:106 char:9
+    +         throw "The lookup of path '$PropertyPath' for node '$($node.N ...
+    +         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.</message>
+                      <stack-trace>at &lt;ScriptBlock&gt;, D:\datum-dsc-for-vmware\Tests\ConfigData\ConfigData.Tests.ps1: line 86
+86:                     { Lookup Configurations -Node $node -DatumTree $datum } | Should -Not -Throw</stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Nodes for environment NonProd" executed="True" result="Success" success="True" time="0.0557" asserts="0" description="Nodes for environment NonProd">
+                <results />
+              </test-suite>
+              <test-suite type="TestFixture" name="Nodes for environment Prod" executed="True" result="Success" success="True" time="0.0541" asserts="0" description="Nodes for environment Prod">
+                <results />
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

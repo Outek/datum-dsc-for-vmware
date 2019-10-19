@@ -1,0 +1,135 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">xDSCResourceDesigner</S>
+      <S N="Version">1.12.0.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">This module is meant to assist with the development and testing of DSC Resources.</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">PowerShellTeam</S>
+      <S N="Copyright">(c) 2015 Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2018-07-25T21:30:49+02:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/PowerShell/xDSCResourceDesigner/blob/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/PowerShell/xDSCResourceDesigner</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>DesiredStateConfiguration</S>
+          <S>DSC</S>
+          <S>DSCResourceKit</S>
+          <S>DSCResource</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>New-xDscResourceProperty</S>
+                <S>New-xDscResource</S>
+                <S>Update-xDscResource</S>
+                <S>Test-xDscResource</S>
+                <S>Test-xDscSchema</S>
+                <S>Import-xDscSchema</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>New-xDscResourceProperty</S>
+                <S>New-xDscResource</S>
+                <S>Update-xDscResource</S>
+                <S>Test-xDscResource</S>
+                <S>Test-xDscSchema</S>
+                <S>Import-xDscSchema</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Fixed `Test-MockSchema` to return True if class name matches resource name when there are multiple embeded classes in the schema mof. [issue 123](https://github.com/PowerShell/xDSCResourceDesigner/issues/73).</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2015 Microsoft Corporation. All rights reserved.</S>
+          <S N="description">This module is meant to assist with the development and testing of DSC Resources.</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Fixed `Test-MockSchema` to return True if class name matches resource name when there are multiple embeded classes in the schema mof. [issue 123](https://github.com/PowerShell/xDSCResourceDesigner/issues/73).</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">87005</S>
+          <S N="downloadCount">139865</S>
+          <S N="packageSize">33813</S>
+          <S N="published">25.07.2018 21:30:49 +02:00</S>
+          <S N="created">25.07.2018 21:30:49 +02:00</S>
+          <S N="lastUpdated">20.08.2019 20:34:06 +02:00</S>
+          <S N="tags">DesiredStateConfiguration DSC DSCResourceKit DSCResource PSModule PSFunction_New-xDscResourceProperty PSCommand_New-xDscResourceProperty PSFunction_New-xDscResource PSCommand_New-xDscResource PSFunction_Update-xDscResource PSCommand_Update-xDscResource PSFunction_Test-xDscResource PSCommand_Test-xDscResource PSFunction_Test-xDscSchema PSCommand_Test-xDscSchema PSFunction_Import-xDscSchema PSCommand_Import-xDscSchema PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2019-08-20T20:34:06Z</S>
+          <S N="NormalizedVersion">1.12.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">xDscResourceDesigner.nuspec|LICENSE|README.md|xDSCResourceDesigner.psd1|xDSCResourceDesigner.psm1|xDSCResourceDesigner.strings.psd1|Tests\xDscResourceDesigner.Tests.ps1</S>
+          <S N="GUID">74951b31-1aa5-472b-9109-738de1bca38f</S>
+          <S N="PowerShellVersion">4.0</S>
+          <S N="CLRVersion">4.0</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Temp\DscWorkshop\DscSample\DSC_Resources\xDSCResourceDesigner\1.12.0.0</S>
+    </MS>
+  </Obj>
+</Objs>

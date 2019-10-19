@@ -1,0 +1,11 @@
+NodeName: 
+Environment: 
+Role: 
+Description: 
+
+EsxHost:
+    Server: 
+    Name: 
+
+PSDscAllowPlainTextPassword: True
+PSDscAllowDomainUser: True

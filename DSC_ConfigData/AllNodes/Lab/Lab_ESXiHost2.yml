@@ -1,0 +1,10 @@
+Role: Lab_EsxHosts
+PSDscAllowPlainTextPassword: true
+NodeName: Lab_ESXiHost2
+Environment: Lab
+EsxHost:
+  Name: Lab_ESXiHost2
+  Server: vcenter-lab.domain
+Description: This is a ESXI Host description
+PSDscAllowDomainUser: true
+
