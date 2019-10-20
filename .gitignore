@@ -1,0 +1,4 @@
+DSC/BuildOutput/*
+
+DSC/DscConfigurations/*
+DSC/DscResources/*

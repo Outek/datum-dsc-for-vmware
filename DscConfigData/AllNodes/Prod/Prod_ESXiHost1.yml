@@ -1,0 +1,10 @@
+Description: This is a ESXi Host description
+Environment: Prod
+NodeName: Prod_ESXiHost1
+Role: Prod_EsxHosts
+PSDscAllowDomainUser: true
+EsxHost_Ntp:
+  Server: vcenter-prod.domain
+  Name: Prod_ESXiHost1
+PSDscAllowPlainTextPassword: true
+

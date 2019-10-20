@@ -6,33 +6,34 @@ task TestDscResources {
     Write-Host 'Currently loaded modules:'
     $env:PSModulePath -split ';' | Write-Host
     Write-Host ------------------------------------------------------------
-    Write-Host "The 'CommonTasks' module provides the following configurations (DSC Composite Resources)"
-    $m = Get-Module -Name CommonTasks -ListAvailable
-    $resourceCount = (dir -Path "$($m.ModuleBase)\DscResources").Count
+    Write-Host "The 'CommonvSphereTasks' module provides the following configurations (DSC Composite Resources)"
+    $m = Get-Module -Name CommonvSphereTasks -ListAvailable
+    $resourceCount = (Get-ChildItem -Path "$($m.ModuleBase)\DSCResources").Count
     Write-Host "ResourceCount $resourceCount"
 
-    $maxIterations = 5
-    while ($resourceCount -ne (Get-DscResource -Module CommonTasks).Count -and $maxIterations -gt 0) {
-        Start-Sleep -Seconds 5
+    $maxIterations = 2
+    while ($resourceCount -ne (Get-DscResource -Module CommonvSphereTasks).Count -and $maxIterations -gt 0) {
+        Start-Sleep -Seconds 1
         $maxIterations--
-        Write-Host "ResourceCount DOES NOT matches, currently '$((Get-DscResource -Module CommonTasks).Count)'"
+        Write-Host "ResourceCount DOES NOT matches, currently '$((Get-DscResource -Module CommonvSphereTasks).Count)'"
     }
     if ($maxIterations -eq 0)
     {
-        throw 'Could not get the expected DSC Resource count'
+        #Stop-Transcript
+        #throw 'Could not get the expected DSC Resource count'
     }
 
     Write-Host "ResourceCount matches ($resourceCount)"
     Write-Host ------------------------------------------------------------
     Write-Host 'Known DSC Composite Resources'
     Write-Host ------------------------------------------------------------
-    Get-DscResource -Module CommonTasks | Out-String | Write-Host
+    Get-DscResource -Module CommonvSphereTasks | Out-String | Write-Host
 
     Write-Host ------------------------------------------------------------
-    Write-Host 'Knwon DSC Resources'
+    Write-Host 'Known DSC Resources'
     Write-Host ------------------------------------------------------------
     Write-Host
-    Import-LocalizedData -BindingVariable requiredResources -FileName PSDepend.DSC_Resources.psd1 -BaseDirectory $ProjectPath
+    Import-LocalizedData -BindingVariable requiredResources -FileName PSDepend.DscResources.psd1 -BaseDirectory $ProjectPath
     $requiredResources = $requiredResources.GetEnumerator() | Where-Object { $_.Name -ne 'PSDependOptions' }
     $requiredResources.GetEnumerator() | Foreach-Object {
         $rr = $_
@@ -46,6 +47,6 @@ task TestDscResources {
     Select-Object -Property Name, Count | Write-Host
     Write-Host ------------------------------------------------------------
 
-    #Stop-Transcript
+    Stop-Transcript
 
 }

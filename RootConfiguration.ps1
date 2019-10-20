@@ -7,15 +7,14 @@ if (-not $buildVersion) {
 }
 
 $environment = $node.Environment
-if (-not $environment ) {
+if (-not $environment ){
     $environment = 'NA'
 }
 
 configuration "RootConfiguration"
 {
     Import-DscResource -ModuleName PSDesiredStateConfiguration
-    Import-DscResource -ModuleName VMware.vSphereDSC
-    Import-DscResource -ModuleName 'vSpherePFDsc'
+    Import-DscResource -ModuleName CommonvSphereTasks
 
     $module = Get-Module -Name PSDesiredStateConfiguration
     & $module {
@@ -39,24 +38,24 @@ configuration "RootConfiguration"
             
             (Get-DscSplattedResource -ResourceName $configurationName -ExecutionName $configurationName -Properties $properties -NoInvoke).Invoke($properties)
             
-            if ($Error[0] -and $lastError -ne $Error[0]) {
+            if($Error[0] -and $lastError -ne $Error[0]) {
                 $lastIndex = [Math]::Max(($Error.LastIndexOf($lastError) -1), -1)
-                if ($lastIndex -gt 0) {
+                if($lastIndex -gt 0) {
                     $Error[0..$lastIndex].Foreach{
-                        if ($message = Get-DscErrorMessage -Exception $_.Exception) {
+                        if($message = Get-DscErrorMessage -Exception $_.Exception) {
                             $null = $dscError.Add($message)
                         }
                     }
                 }
                 else {
-                    if ($message = Get-DscErrorMessage -Exception $Error[0].Exception) {
+                    if($message = Get-DscErrorMessage -Exception $Error[0].Exception) {
                         $null = $dscError.Add($message)
                     }
                 }
                 $lastError = $Error[0]
             }
 
-            if ($dscError.Count -gt 0) {
+            if($dscError.Count -gt 0) {
                 $warningMessage = "    $($Node.Name) : $($Node.Role) ::> $configurationName "
                 $n = [System.Math]::Max(1, 100 - $warningMessage.Length)
                 Write-Host "$warningMessage$('.' * $n)FAILED" -ForeGroundColor Yellow
@@ -76,12 +75,15 @@ configuration "RootConfiguration"
 $cd = @{}
 $cd.Datum = $ConfigurationData.Datum
 
-foreach ($n in $configurationData.AllNodes) {
+foreach ($n in $configurationData.AllNodes)
+{
     $cd.AllNodes = @($ConfigurationData.AllNodes | Where-Object NodeName -eq $n.NodeName)
-    try {
+    try
+    {
         RootConfiguration -ConfigurationData $cd -OutputPath (Join-Path -Path $BuildOutput -ChildPath MOF)
     }
-    catch {
+    catch
+    {
         Write-Host "Error occured during compilation of node '$($n.NodeName)' : $($_.Exception.Message)" -ForegroundColor Red
         $relevantErrors = $Error | Where-Object Exception -isnot [System.Management.Automation.ItemNotFoundException]
         Write-Host ($relevantErrors[0..2] | Out-String) -ForegroundColor Red

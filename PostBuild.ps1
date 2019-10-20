@@ -4,13 +4,13 @@ param (
     $BuildOutput = 'BuildOutput',
 
     [string]
-    $ResourcesFolder = 'DSC_Resources',
+    $ResourcesFolder = 'DscResources',
 
     [string]
-    $ConfigDataFolder = 'DSC_ConfigData',
+    $ConfigDataFolder = 'DscConfigData',
 
     [string]
-    $ConfigurationsFolder = 'DSC_Configurations',
+    $ConfigurationsFolder = 'DscConfigurations',
 
     [Parameter(Position = 0)]
     $Tasks,
@@ -56,4 +56,7 @@ Get-ChildItem -Path "$PSScriptRoot/.build/" -Recurse -Include *.ps1 |
     catch { }
 }
 
-#task . Deploy
+task . NewMofChecksums,
+#CompressModulesWithChecksum,
+#Deploy,
+TestBuildAcceptance

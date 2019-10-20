@@ -9,7 +9,6 @@
     }
 
     InvokeBuild       = 'latest'
-    PSDeploy          = 'latest'
     BuildHelpers      = 'latest'
     Pester            = 'latest'
     PSScriptAnalyzer  = 'latest'

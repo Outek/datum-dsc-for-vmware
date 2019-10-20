@@ -4,10 +4,10 @@ param (
     $BuildOutput = 'BuildOutput',
 
     [string]
-    $ResourcesFolder = 'DSC_Resources',
+    $ResourcesFolder = 'DscResources',
 
     [string]
-    $ConfigDataFolder = 'DSC_ConfigData',
+    $ConfigDataFolder = 'DscConfigData',
 
     [String]
     $Environment = $(
@@ -21,10 +21,10 @@ param (
     [String]
     $RoleName,
 
-    [String]
-    $ConfigurationsFolder = 'DSC_Configurations',
+    [string]
+    $ConfigurationsFolder = 'DscConfigurations',
 
-    [String]
+    [string]
     $TestFolder = 'Tests',
 
     [ScriptBlock]
@@ -38,10 +38,7 @@ param (
 
     [uri]
     $GalleryProxy,
-
-    [Switch]
-    $ForceEnvironmentVariables = $true,
-
+    
     [Parameter(Position = 0)]
     $Tasks,
 
@@ -71,21 +68,21 @@ param (
     }
 )
 
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
+Add-Type -AssemblyName System.Threading
+$m = [System.Threading.Mutex]::new($false, 'DscBuildProcessMutex')
+
 if ($RoleName) {
     if ((Get-ChildItem -Path ".\$ConfigDataFolder\DSC_ConfigData\Roles" -Filter "$RoleName*" -ErrorAction SilentlyContinue)) {
         Write-Output "Role found with name $RoleName"
     }
     else {
-        Write-Output "No role found with given name $RoleName"
+        Write-Output "No role found with the given name $RoleName"
     }
 }
 
-[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
-Add-Type -AssemblyName System.Threading
-$m = [System.Threading.Mutex]::new($false, 'DscBuildProcessMutex')
-
 $env:BHBuildStartTime = Get-Date
-#Write-Host "Current Process ID is '$PID'"
+Write-Host "Current Process ID is '$PID'"
 
 #changing the path is required to make PSDepend run without internet connection. It is required to download nutget.exe once first:
 #Invoke-WebRequest -Uri 'https://aka.ms/psget-nugetexe' -OutFile C:\ProgramData\Microsoft\Windows\PowerShell\PowerShellGet\nuget.exe -ErrorAction Stop
@@ -119,7 +116,7 @@ if ($buildModulesPath -notin $psModulePathElemets) {
 }
 
 #importing all resources from .build directory
-Get-ChildItem -Path "$PSScriptRoot/.build/" -Recurse -Include *.ps1 |
+Get-ChildItem -Path "$PSScriptRoot/.build" -Recurse -Include *.ps1 |
     ForEach-Object {
     Write-Verbose "Importing file $($_.BaseName)"
     try {
@@ -164,7 +161,9 @@ if ($MyInvocation.ScriptName -notlike '*Invoke-Build.ps1') {
                     Task                    = 'WaitForMutex',
                     'TestDscResources',
                     'LoadDatumConfigData',
-                    'CompileRootConfiguration'
+                    # 'CompileDatumRsop',
+                    'CompileRootConfiguration' #,
+                    #'CompileRootMetaMof'
                     Filter                  = [scriptblock]::Create($filterString)
                     MofCompilationTaskCount = $MofCompilationTaskCount
                     ProjectPath             = $ProjectPath
@@ -185,6 +184,16 @@ if ($MyInvocation.ScriptName -notlike '*Invoke-Build.ps1') {
 
     $m.Dispose()
     Write-Host "Created $((Get-ChildItem -Path "$BuildOutput\MOF" -Filter *.mof).Count) MOF files in '$BuildOutput/MOF'" -ForegroundColor Green
+
+    #Debug Output
+    Write-Host "------------------------------------" -ForegroundColor Magenta
+    Write-Host "PowerShell Variables" -ForegroundColor Magenta
+    Get-Variable | Out-String | Write-Host -ForegroundColor Magenta
+    Write-Host "------------------------------------" -ForegroundColor Magenta
+    Write-Host "Environment Variables" -ForegroundColor Magenta
+    Get-ChildItem env: | Out-String | Write-Host -ForegroundColor Magenta
+    Write-Host "------------------------------------" -ForegroundColor Magenta
+    
     return
 }
 
@@ -193,7 +202,9 @@ if ($TaskHeader) {
 }
 
 if ($MofCompilationTaskCount -gt 1) {
-    task . SetPsModulePath,
+    task . Init,
+    CleanBuildOutput,
+    SetPsModulePath,
     DownloadDependencies,
     TestConfigData,
     VersionControl,
@@ -201,13 +212,22 @@ if ($MofCompilationTaskCount -gt 1) {
 }
 else {
     if (-not $Tasks) {
-        task . SetPsModulePath,
+        task . Init,
+        CleanBuildOutput,
+        SetPsModulePath,
         TestConfigData,
         VersionControl,
         LoadDatumConfigData,
-        CompileRootConfiguration
+        # CompileDatumRsop,
+        TestDscResources,
+        CompileRootConfiguration #,
+        # CompileRootMetaMof
     }
     else {
         task . $Tasks
     }
 }
+
+Write-Host "Running the folling tasks:" -ForegroundColor Magenta
+${*}.All[-1].Jobs | ForEach-Object { "`t$_" } | Write-Host
+Write-Host

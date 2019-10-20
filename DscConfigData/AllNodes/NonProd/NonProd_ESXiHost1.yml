@@ -1,0 +1,7 @@
+Description: This is a ESXi Host description
+Environment: NonProd
+NodeName: NonProd_ESXiHost1
+Role: NonProd_EsxHosts
+PSDscAllowDomainUser: true
+vCenterServer: vcenter-nonprod.domain
+PSDscAllowPlainTextPassword: true

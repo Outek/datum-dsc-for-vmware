@@ -32,20 +32,32 @@ if (!($vCenterServer)) {
 $ScriptDir = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 $ParentScriptDir = Split-Path -Path $ScriptDir -Parent
 
+$yml = @"
+NodeName: 
+Environment: 
+Role: 
+Description: 
+
+EsxHost:
+    Server: 
+    Name: 
+
+PSDscAllowPlainTextPassword: True
+PSDscAllowDomainUser: True
+"@
+
 $i = 1
 do {
     $Nodename = $Context + "_ESXiHost" + $i
-    Copy-item $ParentScriptDir\Template\serverconfig.yml $ParentScriptDir\DSC_ConfigData\AllNodes\$Context\$Nodename.yml
-
-    $Content = Get-Content $ParentScriptDir\DSC_ConfigData\AllNodes\$Context\$Nodename.yml -Raw | ConvertFrom-Yaml
+    $Content = $yml | ConvertFrom-Yaml
     $Content.nodename = $Nodename
     $Content.Role = $Context+'_'+$Role
     $Content.EsxHost.Server = $vCenterServer
     $Content.EsxHost.Name = $Nodename
-    $Content.Description = 'This is a ESXI Host description'
+    $Content.Description = 'This is a ESXi Host description'
     $Content.Environment = $Context
-
-    ConvertTo-Yaml $Content | Set-Content $ParentScriptDir\DSC_ConfigData\Allnodes\$Context\$Nodename.yml -force
+    New-Item -Path $ParentScriptDir\DSCConfigData\AllNodes\$Context -ItemType File -Name $Nodename.yml
+    ConvertTo-Yaml $Content | Set-Content $ParentScriptDir\DSCConfigData\AllNodes\$Context\$Nodename.yml -Force
     ++$i
 }
 until ($i -gt $Nodes)

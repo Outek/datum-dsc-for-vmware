@@ -1,0 +1,5 @@
+Configurations:
+  - EsxHost
+
+EsxHost:
+  NtpServers: "NtpServerLab1,NtpServerLab2"
