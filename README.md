@@ -30,6 +30,7 @@ You can build some Node Configurations with the script in Tools / CreateHosts.ps
 
 [10:12] [189.39ms] .\datum-dsc-for-vmware\Tools [origin/master]
 PS> .\CreateHosts.ps1 -Context Lab -Nodes 10 -Role EsxHosts
+
 ```
 
 ## Steps to build your Mof Files
@@ -38,12 +39,18 @@ PS> .\CreateHosts.ps1 -Context Lab -Nodes 10 -Role EsxHosts
 # 1. Import all modules and Dependencies
  .\Build.ps1 -ResolveDependency
 
-# 2a. Build your mof Files from your Lab Environment
+# 2. Build some Test Hosts to generate configurations
+ .\Tools\CreateHosts.ps1 -Context Lab -Nodes 10
+ .\Tools\CreateHosts.ps1 -Context NonProd -Nodes 10
+ .\Tools\CreateHosts.ps1 -Context Prod -Nodes 10
+
+# 3a. Build your mof Files from your Lab Environment
  .\Build.ps1 -Environment Lab
 
-# 2b. Build your mof for a specific Role
+# 3b. Build your mof for a specific Role
  .\Build.ps1 -RoleName Lab_EsxHosts
 
-# 2c. or build'em all!
+# 3c. or build'em all!
  .\Build.ps1
+
 ```
