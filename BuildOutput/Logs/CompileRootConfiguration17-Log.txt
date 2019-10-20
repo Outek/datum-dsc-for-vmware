@@ -1,6 +1,6 @@
 ﻿**********************
 nStart der Windows PowerShell-Aufzeichnung
-Startzeit: 20191020222749
+Startzeit: 20191020225113
 Benutzername: DESKTOP-UHNCGG9\Daniel
 RunAs-Benutzer: DESKTOP-UHNCGG9\Daniel
 Konfigurationsname: 
@@ -24,5 +24,5 @@ Lab_ESXiHost1 : Lab_ESXiHost1 : MOF__0.0.0 NA
 Successfully compiled 1 MOF files
 **********************
 Ende der Windows PowerShell-Aufzeichnung
-Endzeit: 20191020222750
+Endzeit: 20191020225115
 **********************

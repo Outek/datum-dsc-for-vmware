@@ -33,16 +33,17 @@ PS> .\CreateHosts.ps1 -Context Lab -Nodes 10 -Role EsxHosts
 
 ```
 
-## Steps to build your Mof Files
+## Steps to build your Mof Files (after cloning this Repo)
 
 ```Powershell
-# 1. Import all modules and Dependencies
- .\Build.ps1 -ResolveDependency
 
-# 2. Build some Test Hosts to generate configurations
+# 1. Build some Test Hosts to generate configurations
  .\Tools\CreateHosts.ps1 -Context Lab -Nodes 10
  .\Tools\CreateHosts.ps1 -Context NonProd -Nodes 10
  .\Tools\CreateHosts.ps1 -Context Prod -Nodes 10
+
+# 2. Import all modules and Dependencies
+ .\Build.ps1 -ResolveDependency
 
 # 3a. Build your mof Files from your Lab Environment
  .\Build.ps1 -Environment Lab

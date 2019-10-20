@@ -1,6 +1,6 @@
 ﻿**********************
 nStart der Windows PowerShell-Aufzeichnung
-Startzeit: 20191020222746
+Startzeit: 20191020225111
 Benutzername: DESKTOP-UHNCGG9\Daniel
 RunAs-Benutzer: DESKTOP-UHNCGG9\Daniel
 Konfigurationsname: 
@@ -33,7 +33,7 @@ Known DSC Composite Resources
 
 ImplementedAs   Name                      ModuleName                     Version    Properties                                   
 -------------   ----                      ----------                     -------    ----------                                   
-Composite       EsxHost                   CommonvSphereTasks             0.0.4      {DependsOn, PsDscRunAsCredential, Name, Se...
+Composite       EsxHost                   CommonvSphereTasks             0.0.5      {DependsOn, PsDscRunAsCredential, Name, Se...
 ------------------------------------------------------------
 Known DSC Resources
 ------------------------------------------------------------
@@ -43,5 +43,5 @@ Known DSC Resources
 ------------------------------------------------------------
 **********************
 Ende der Windows PowerShell-Aufzeichnung
-Endzeit: 20191020222748
+Endzeit: 20191020225113
 **********************

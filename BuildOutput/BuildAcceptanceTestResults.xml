@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="2" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2019-10-20" time="22:27:51">
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="2" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2019-10-20" time="22:51:15">
   <environment clr-version="4.0.30319.42000" user-domain="DESKTOP-UHNCGG9" cwd="C:\Git\datum-dsc-for-vmware" platform="Microsoft Windows 10 Pro|C:\WINDOWS|\Device\Harddisk0\Partition4" machine-name="DESKTOP-UHNCGG9" nunit-version="2.5.8.0" os-version="10.0.18362" user="Daniel" />
   <culture-info current-culture="de-CH" current-uiculture="de-DE" />
-  <test-suite type="TestFixture" name="Pester" executed="True" result="Success" success="True" time="0.1929" asserts="0" description="Pester">
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Success" success="True" time="0.1605" asserts="0" description="Pester">
     <results>
-      <test-suite type="TestFixture" name="C:\Git\datum-dsc-for-vmware\Tests\Acceptance\TestMofFiles.Tests.ps1" executed="True" result="Success" success="True" time="0.1575" asserts="0" description="C:\Git\datum-dsc-for-vmware\Tests\Acceptance\TestMofFiles.Tests.ps1">
+      <test-suite type="TestFixture" name="C:\Git\datum-dsc-for-vmware\Tests\Acceptance\TestMofFiles.Tests.ps1" executed="True" result="Success" success="True" time="0.1259" asserts="0" description="C:\Git\datum-dsc-for-vmware\Tests\Acceptance\TestMofFiles.Tests.ps1">
         <results>
-          <test-suite type="TestFixture" name="MOF Files" executed="True" result="Success" success="True" time="0.1129" asserts="0" description="MOF Files">
+          <test-suite type="TestFixture" name="MOF Files" executed="True" result="Success" success="True" time="0.0567" asserts="0" description="MOF Files">
             <results>
-              <test-case description="All nodes have a MOF file" name="MOF Files.All nodes have a MOF file" time="0.0032" asserts="0" success="True" result="Success" executed="True" />
-              <test-case description="Node 'Lab_ESXiHost1' should have a MOF file" name="MOF Files.Node 'Lab_ESXiHost1' should have a MOF file" time="0.0024" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="All nodes have a MOF file" name="MOF Files.All nodes have a MOF file" time="0.0028" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Node 'Lab_ESXiHost1' should have a MOF file" name="MOF Files.Node 'Lab_ESXiHost1' should have a MOF file" time="0.0025" asserts="0" success="True" result="Success" executed="True" />
             </results>
           </test-suite>
         </results>
       </test-suite>
-      <test-suite type="TestFixture" name="C:\Git\datum-dsc-for-vmware\Tests\ConfigData\ConfigData.Tests.ps1" executed="True" result="Success" success="True" time="0.0354" asserts="0" description="C:\Git\datum-dsc-for-vmware\Tests\ConfigData\ConfigData.Tests.ps1">
+      <test-suite type="TestFixture" name="C:\Git\datum-dsc-for-vmware\Tests\ConfigData\ConfigData.Tests.ps1" executed="True" result="Success" success="True" time="0.0346" asserts="0" description="C:\Git\datum-dsc-for-vmware\Tests\ConfigData\ConfigData.Tests.ps1">
         <results />
       </test-suite>
     </results>
