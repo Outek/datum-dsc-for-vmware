@@ -26,23 +26,24 @@ It is a small PoC to show the benefits with Datum and Infrastructure as Code.
 
 You can build some Node Configurations with the script in Tools / CreateHosts.ps1
 
-```powershell
+```Powershell
 
-[10:12] [189.39ms] D:\git\datum-dsc-for-vmware\Tools [origin/master]
+[10:12] [189.39ms] .\datum-dsc-for-vmware\Tools [origin/master]
 PS> .\CreateHosts.ps1 -Context Lab -Nodes 10 -Role EsxHosts
-
 ```
 
-```powershell
+## Steps to build your Mof Files
 
-# Import all modules
+```Powershell
+# 1. Import all modules and Dependencies
  .\Build.ps1 -ResolveDependency
 
-# Build your mof Files from your Lab Environment
+# 2a. Build your mof Files from your Lab Environment
  .\Build.ps1 -Environment Lab
 
-# Build your mofs for a specific Role
- .\Build.ps1 -RoleName EsxHosts
+# 2b. Build your mof for a specific Role
+ .\Build.ps1 -RoleName Lab_EsxHosts
 
-
+# 2c. or build'em all!
+ .\Build.ps1
 ```
