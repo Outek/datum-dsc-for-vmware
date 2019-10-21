@@ -3,5 +3,7 @@ Environment: NonProd
 NodeName: NonProd_ESXiHost1
 Role: NonProd_EsxHosts
 PSDscAllowDomainUser: true
-vCenterServer: vcenter-nonprod.domain
+EsxHost:
+  Name: NonProd_ESXiHost1
 PSDscAllowPlainTextPassword: true
+

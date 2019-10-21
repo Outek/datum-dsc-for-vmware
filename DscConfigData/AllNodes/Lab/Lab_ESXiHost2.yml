@@ -1,9 +1,10 @@
 Description: This is a ESXi Host description
-Environment: Prod
-NodeName: Prod_ESXiHost1
-Role: Prod_EsxHosts
+Environment: Lab
+Location: Zofingen
+NodeName: Lab_ESXiHost2
+Role: Lab_EsxHosts
 PSDscAllowDomainUser: true
 EsxHost:
-  Name: Prod_ESXiHost1
+  Name: Lab_ESXiHost2
 PSDscAllowPlainTextPassword: true
 

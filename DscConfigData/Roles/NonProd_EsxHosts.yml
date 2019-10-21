@@ -2,5 +2,6 @@ Configurations:
   - EsxHost
 
 EsxHost:
+  Server: vcenter-nonprod.domain
   NtpServers: "NtpServerNonProd1,NtpServerNonProd2"
-  Syslog_Server: "udp:://syslog-prod.domain:514"
+  SyslogServer: "udp:://syslogNonProd.domain:514"

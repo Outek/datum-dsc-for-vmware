@@ -56,7 +56,8 @@ do {
     $Content.EsxHost.Name = $Nodename
     $Content.Description = 'This is a ESXi Host description'
     $Content.Environment = $Context
-    New-Item -Path $ParentScriptDir\DSCConfigData\AllNodes\$Context -ItemType File -Name $Nodename.yml
+    Write-Output "Creating Server yaml file in path $ParentScriptDir\DSCConfigData\AllNodes\$Context"
+    New-Item -Path $ParentScriptDir\DSCConfigData\AllNodes\$Context\$Nodename.yml -ItemType "file"  -Force
     ConvertTo-Yaml $Content | Set-Content $ParentScriptDir\DSCConfigData\AllNodes\$Context\$Nodename.yml -Force
     ++$i
 }

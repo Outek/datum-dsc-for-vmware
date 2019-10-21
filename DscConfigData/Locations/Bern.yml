@@ -1,1 +1,5 @@
-# Some Location specific settings
+EsxHost:
+  DNSServerConfigs:
+    - DomainName: domain.name.com
+      Address: "10.23.83.229, 10.23.108.1"
+      SearchDomain: "bern.vmware.com, zofingen.vmware.com"

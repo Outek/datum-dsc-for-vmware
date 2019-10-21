@@ -1,10 +1,8 @@
 ResolutionPrecedence:
   - AllNodes\$($Node.Environment)\$($Node.NodeName)
+  - Roles\$($Node.Role)
   - Environment\$($Node.Environment)
   - Locations\$($Node.Location)
-  - Roles\$($Node.Role)
-  - Roles\ServerBaseline
-  - Roles\DscBaseline
 
 default_lookup_options: MostSpecific
 

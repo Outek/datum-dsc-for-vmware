@@ -1,11 +1,10 @@
 Description: This is a ESXi Host description
 Environment: Lab
+Location: Bern
 NodeName: Lab_ESXiHost1
 Role: Lab_EsxHosts
 PSDscAllowDomainUser: true
 EsxHost:
-  Server: vcenter-lab.domain
   Name: Lab_ESXiHost1
-  NtpServers: "NtpServerLab1,NtpServerLab2"
 PSDscAllowPlainTextPassword: true
 

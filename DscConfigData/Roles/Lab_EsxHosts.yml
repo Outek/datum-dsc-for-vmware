@@ -2,4 +2,10 @@ Configurations:
   - EsxHost
 
 EsxHost:
+  Server: vcenter-lab.domain
   NtpServers: "NtpServerLab1,NtpServerLab2"
+  SyslogServer: "udp:://syslogLab.domain:514"
+  # DNSServerConfigs:
+  #   - DomainName: domain.name.com
+  #     Address: "10.23.83.229, 10.23.108.1"
+  #     SearchDomain: "eng2.vmware.com, eng2.vmware.com"
