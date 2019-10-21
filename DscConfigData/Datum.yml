@@ -14,3 +14,7 @@ lookup_options:
     merge_hash: deep
   EsxHost\NtpServers:
     merge_hash_array: UniqueKeyValTuples
+
+  vCenter:
+    merge_hash: deep
+    

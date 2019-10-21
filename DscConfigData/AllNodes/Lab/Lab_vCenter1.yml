@@ -1,0 +1,9 @@
+Description: This is a vCenter description
+Environment: Lab
+Location: Bern
+NodeName: Lab_vCenter1
+Role: Lab_vCenter
+PSDscAllowDomainUser: true
+vCenter:
+  Name: Lab_vCenter1
+PSDscAllowPlainTextPassword: true

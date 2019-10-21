@@ -1,0 +1,13 @@
+Configurations:
+  - vCenter
+
+vCenter:
+  Server: vcenter-lab.domain
+  Name: Lab_vCenter1
+  LoggingLevel: Warning
+  EventMaxAgeEnabled: False
+  EventMaxAge: 40
+  TaskMaxAgeEnabled: False
+  TaskMaxAge: 40
+  Period: Day
+  Level: 2
